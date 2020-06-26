@@ -26,11 +26,11 @@ function DataTable({ headings, users, handleSort }) {
                   style={{width}}
                   // ADD ONCLICK EVENT TO CALL CALLBACK PASSED IN
                   onClick={() => {
-                   handleSort(name);
+                   handleSort(name.toLowerCase());
                   }}
                 >
                   {/* ADD HEADING NAME PASSED IN HERE */}
-                  <span className="pointer"></span>
+                  <span className="pointer">{name}</span>
                 </th>
               );
             })} 

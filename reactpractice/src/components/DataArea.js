@@ -66,6 +66,8 @@ export default class DataArea extends Component {
 
     }
     const sortedUsers = this.state.filteredUsers.sort(compareFnc);
+    console.log("SortedUsers:")
+    console.log(sortedUsers)
     this.setState({ filteredUsers: sortedUsers });
   }
 
