@@ -12,7 +12,7 @@ function DataTable({ headings, users, handleSort }) {
         <thead>
           <tr>
 
-            {DataTable.headings.map(({name,width}) => {
+            {headings.map(({name,width}) => {
          {/* ADD A LINE OF CODE TO LOOP THROUGH HEADINGS WITH .map METHOD
                 DESTRUCTURE INPUT ARGUMENT TO EXTRACT NAME and WIDTH */}
             {/* THE FOLLOWING RETURN STATEMENT SHOULD BE INSIDE
@@ -26,7 +26,7 @@ function DataTable({ headings, users, handleSort }) {
                   style={{width}}
                   // ADD ONCLICK EVENT TO CALL CALLBACK PASSED IN
                   onClick={() => {
-                    DataTable.handleSort(name);
+                   handleSort(name);
                   }}
                 >
                   {/* ADD HEADING NAME PASSED IN HERE */}
@@ -38,7 +38,9 @@ function DataTable({ headings, users, handleSort }) {
         </thead>
        
        {/* ADD CODE TO CALL COMPONENT DATABODY PASSING USERS AS INPUT ARGUMENT  */}
-        <DataBody />
+        <DataBody 
+          users={users}
+        />
 
       </table>
     </div>
